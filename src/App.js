@@ -1,8 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
-import TransactionTable from './components/TransactionTable';
-import TransactionForm from './components/TransactionForm';
-import SearchBar from './components/SearchBar';
+import TransactionTable from './components/transactionTable';
+import TransactionForm from './components/transactionForm';
+import SearchBar from './components/searchBar';
 
 const App = () => {
   const [transactions, setTransactions] = useState([]);
@@ -44,7 +44,7 @@ const App = () => {
         throw new Error('Failed to add transaction');
       }
       const data = await response.json();
-      // Optionally, you can update the state with the returned transaction data if needed
+     
     } catch (error) {
       setError(error.message);
       // Revert UI update if there's an error
